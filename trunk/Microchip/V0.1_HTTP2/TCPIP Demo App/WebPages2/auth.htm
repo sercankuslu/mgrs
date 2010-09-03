@@ -1,0 +1,52 @@
+~inc:header.inc~
+<div id="content">
+
+<h1>Authentication</h1>
+
+<p>Many applications need to restrict access to authorized users.  The HTTP 
+server supports Basic HTTP Authentication to provide this functionality.</p>
+
+<p>The HTTP server makes two calls to the <code>HTTPAuthenticate()</code> API 
+during each request.  The first occurs immediately after the file name is 
+parsed.  The <code>filename</code> parameter will contain the full filename 
+currently being requested, but the other parameters will both be set to 
+<code>NULL</code>.  At this point, your application must decide whether or not 
+authentication is required.  Return a value of <code>0x80</code> or greater 
+to allow access unconditionally.  Return <code>0x79</code> or lower to require 
+authorization.</p>
+
+<p>The second call to <code>HTTPAuthenticate</code> occurs when an 
+<code>Authorization:</code> header is encountered in the client's request.  
+This call will have the <code>user</code> and <code>pass</code> pointers 
+defined.  At this stage, your application should return a value greater than 
+<code>0x80</code> to permit access, or a value less than <code>0x79</code> 
+to reject the password supplied.  It is important to note that the 
+<code>filename</code> parameter will not be defined during this call.</p>
+
+<p>As an example, access this restricted page:</p>
+
+<div class="examplebox">
+<b>User Name:</b> admin &nbsp; &nbsp; &nbsp; <b>Password:</b> microchip<br />
+<a href="/protect">Access Restricted Page</a>
+</div>
+
+<p>Most applications will use only two values: one value to permit access and 
+one to deny.  For more sophisticated user access control, multiple values are 
+supported.  An application could set different values between <code>0x00</code> 
+and <code>0x79</code> to indicate which page was requested.  When the second 
+call to <code>HTTPAuthenticate</code> is made, the application can base its 
+decision on the value of <code>curHTTP.isAuthorized</code> (which holds the 
+value returned from the previous call.  Once authorization passes, setting 
+<code>curHTTP.isAuthorized</code> to various values above <code>0x80</code> 
+will allow later callbacks to <code>HTTPPrint_*()</code> to know which user 
+was authenticated.  While largely unnecessary for most applications, this 
+additional flexibility can allow much more sophisticated user access 
+control systems.</p> 
+
+</div>
+
+<script type="text/javascript">
+document.getElementById('hello').innerHTML = "~hellomsg~";
+</script>
+
+~inc:footer.inc~
