@@ -769,25 +769,25 @@ static void ProcessIO(void)
 						soma = USARTString_rec[6];   // Recebe dados MSB			
 						SENSOR_01_P_CONTROL = 256 * soma;
 						soma = USARTString_rec[7];	 // Recebe dados LSB		
-					    SENSOR_01_P_CONTROL = soma;
+					    SENSOR_01_P_CONTROL = SENSOR_01_P_CONTROL + soma;
 
 						//Recebe dados de temperatura do sensor
 						soma = USARTString_rec[8];	 // Recebe dados MSB		
 						SENSOR_01_T_CONTROL = 256 * soma;
 						soma = USARTString_rec[9];	 // Recebe dados LSB		
-					    SENSOR_01_T_CONTROL = soma;
+					    SENSOR_01_T_CONTROL = SENSOR_01_T_CONTROL + soma;
 
 						//Recebe dados de luminosidade do sensor
 						soma = USARTString_rec[10];	 // Recebe dados MSB		
 						SENSOR_01_L_CONTROL = 256 * soma;
 						soma = USARTString_rec[11];	 // Recebe dados LSB		
-					    SENSOR_01_L_CONTROL = soma;
+					    SENSOR_01_L_CONTROL = SENSOR_01_L_CONTROL + soma;
 
 						//Recebe dados de umidade do sensor
 						soma = USARTString_rec[12];	 // Recebe dados MSB		
-						SENSOR_01_L_CONTROL = 256 * soma;
+						SENSOR_01_U_CONTROL = 256 * soma;
 						soma = USARTString_rec[13];	 // Recebe dados LSB		
-					    SENSOR_01_L_CONTROL = soma;
+					    SENSOR_01_U_CONTROL = SENSOR_01_U_CONTROL + soma;
 					
 						//Valida valores dos sensores para envio de TRAP
 						ValidaLimitesSensor(SENSOR_01_ID, SENSOR_01_P_CONTROL, PRESSAO);		
@@ -809,25 +809,25 @@ static void ProcessIO(void)
 						soma = USARTString_rec[6];   // Recebe dados MSB			
 						SENSOR_02_P_CONTROL = 256 * soma;
 						soma = USARTString_rec[7];	 // Recebe dados LSB		
-					    SENSOR_02_P_CONTROL = soma;
+					    SENSOR_02_P_CONTROL = SENSOR_02_P_CONTROL + soma;
 
 						//Recebe dados de temperatura do sensor
 						soma = USARTString_rec[8];	 // Recebe dados MSB		
 						SENSOR_02_T_CONTROL = 256 * soma;
 						soma = USARTString_rec[9];	 // Recebe dados LSB		
-					    SENSOR_02_T_CONTROL = soma;
+					    SENSOR_02_T_CONTROL = SENSOR_02_T_CONTROL + soma;
 
 						//Recebe dados de luminosidade do sensor
 						soma = USARTString_rec[10];	 // Recebe dados MSB		
 						SENSOR_02_L_CONTROL = 256 * soma;
 						soma = USARTString_rec[11];	 // Recebe dados LSB		
-					    SENSOR_02_L_CONTROL = soma;
+					    SENSOR_02_L_CONTROL = SENSOR_02_L_CONTROL + soma;
 
 						//Recebe dados de umidade do sensor
 						soma = USARTString_rec[12];	 // Recebe dados MSB		
-						SENSOR_02_L_CONTROL = 256 * soma;
+						SENSOR_02_U_CONTROL = 256 * soma;
 						soma = USARTString_rec[13];	 // Recebe dados LSB		
-					    SENSOR_02_L_CONTROL = soma;
+					    SENSOR_02_U_CONTROL = SENSOR_02_U_CONTROL + soma;
 						
 						//Valida valores dos sensores para envio de TRAP
 						ValidaLimitesSensor(SENSOR_02_ID, SENSOR_02_P_CONTROL, PRESSAO);		
@@ -849,25 +849,25 @@ static void ProcessIO(void)
 						soma = USARTString_rec[6];   // Recebe dados MSB			
 						SENSOR_03_P_CONTROL = 256 * soma;
 						soma = USARTString_rec[7];	 // Recebe dados LSB		
-					    SENSOR_03_P_CONTROL = soma;
+					    SENSOR_03_P_CONTROL = SENSOR_03_P_CONTROL + soma;
 
 						//Recebe dados de temperatura do sensor
 						soma = USARTString_rec[8];	 // Recebe dados MSB		
 						SENSOR_03_T_CONTROL = 256 * soma;
 						soma = USARTString_rec[9];	 // Recebe dados LSB		
-					    SENSOR_03_T_CONTROL = soma;
+					    SENSOR_03_T_CONTROL = SENSOR_03_T_CONTROL + soma;
 
 						//Recebe dados de luminosidade do sensor
 						soma = USARTString_rec[10];	 // Recebe dados MSB		
 						SENSOR_03_L_CONTROL = 256 * soma;
 						soma = USARTString_rec[11];	 // Recebe dados LSB		
-					    SENSOR_03_L_CONTROL = soma;
+					    SENSOR_03_L_CONTROL = SENSOR_03_L_CONTROL + soma;
 
 						//Recebe dados de umidade do sensor
 						soma = USARTString_rec[12];	 // Recebe dados MSB		
-						SENSOR_03_L_CONTROL = 256 * soma;
+						SENSOR_03_U_CONTROL = 256 * soma;
 						soma = USARTString_rec[13];	 // Recebe dados LSB		
-					    SENSOR_03_L_CONTROL = soma;
+					    SENSOR_03_U_CONTROL = SENSOR_03_U_CONTROL + soma;
 						
 						//Valida valores dos sensores para envio de TRAP
 						ValidaLimitesSensor(SENSOR_03_ID, SENSOR_03_P_CONTROL, PRESSAO);		
@@ -889,25 +889,25 @@ static void ProcessIO(void)
 						soma = USARTString_rec[6];   // Recebe dados MSB			
 						SENSOR_04_P_CONTROL = 256 * soma;
 						soma = USARTString_rec[7];	 // Recebe dados LSB		
-					    SENSOR_04_P_CONTROL = soma;
+					    SENSOR_04_P_CONTROL = SENSOR_04_P_CONTROL + soma;
 
 						//Recebe dados de temperatura do sensor
 						soma = USARTString_rec[8];	 // Recebe dados MSB		
 						SENSOR_04_T_CONTROL = 256 * soma;
 						soma = USARTString_rec[9];	 // Recebe dados LSB		
-					    SENSOR_04_T_CONTROL = soma;
+					    SENSOR_04_T_CONTROL = SENSOR_04_T_CONTROL + soma;
 
 						//Recebe dados de luminosidade do sensor
 						soma = USARTString_rec[10];	 // Recebe dados MSB		
 						SENSOR_04_L_CONTROL = 256 * soma;
 						soma = USARTString_rec[11];	 // Recebe dados LSB		
-					    SENSOR_04_L_CONTROL = soma;
+					    SENSOR_04_L_CONTROL = SENSOR_04_L_CONTROL + soma;
 
 						//Recebe dados de umidade do sensor
 						soma = USARTString_rec[12];	 // Recebe dados MSB		
-						SENSOR_04_L_CONTROL = 256 * soma;
+						SENSOR_04_U_CONTROL = 256 * soma;
 						soma = USARTString_rec[13];	 // Recebe dados LSB		
-					    SENSOR_04_L_CONTROL = soma;
+					    SENSOR_04_U_CONTROL = SENSOR_04_U_CONTROL + soma;
 						
 						//Valida valores dos sensores para envio de TRAP
 						ValidaLimitesSensor(SENSOR_04_ID, SENSOR_04_P_CONTROL, PRESSAO);		
@@ -929,25 +929,25 @@ static void ProcessIO(void)
 						soma = USARTString_rec[6];   // Recebe dados MSB			
 						SENSOR_05_P_CONTROL = 256 * soma;
 						soma = USARTString_rec[7];	 // Recebe dados LSB		
-					    SENSOR_05_P_CONTROL = soma;
+					    SENSOR_05_P_CONTROL = SENSOR_05_P_CONTROL + soma;
 
 						//Recebe dados de temperatura do sensor
 						soma = USARTString_rec[8];	 // Recebe dados MSB		
 						SENSOR_05_T_CONTROL = 256 * soma;
 						soma = USARTString_rec[9];	 // Recebe dados LSB		
-					    SENSOR_05_T_CONTROL = soma;
+					    SENSOR_05_T_CONTROL = SENSOR_05_T_CONTROL + soma;
 
 						//Recebe dados de luminosidade do sensor
 						soma = USARTString_rec[10];	 // Recebe dados MSB		
 						SENSOR_05_L_CONTROL = 256 * soma;
 						soma = USARTString_rec[11];	 // Recebe dados LSB		
-					    SENSOR_05_L_CONTROL = soma;
+					    SENSOR_05_L_CONTROL = SENSOR_05_L_CONTROL + soma;
 
 						//Recebe dados de umidade do sensor
 						soma = USARTString_rec[12];	 // Recebe dados MSB		
-						SENSOR_05_L_CONTROL = 256 * soma;
+						SENSOR_05_U_CONTROL = 256 * soma;
 						soma = USARTString_rec[13];	 // Recebe dados LSB		
-					    SENSOR_05_L_CONTROL = soma;
+					    SENSOR_05_U_CONTROL = SENSOR_05_U_CONTROL + soma;
 
 						
 						//Valida valores dos sensores para envio de TRAP
@@ -970,25 +970,25 @@ static void ProcessIO(void)
 						soma = USARTString_rec[6];   // Recebe dados MSB			
 						SENSOR_06_P_CONTROL = 256 * soma;
 						soma = USARTString_rec[7];	 // Recebe dados LSB		
-					    SENSOR_06_P_CONTROL = soma;
+					    SENSOR_06_P_CONTROL = SENSOR_06_P_CONTROL + soma;
 
 						//Recebe dados de temperatura do sensor
 						soma = USARTString_rec[8];	 // Recebe dados MSB		
 						SENSOR_06_T_CONTROL = 256 * soma;
 						soma = USARTString_rec[9];	 // Recebe dados LSB		
-					    SENSOR_06_T_CONTROL = soma;
+					    SENSOR_06_T_CONTROL = SENSOR_06_T_CONTROL + soma;
 
 						//Recebe dados de luminosidade do sensor
 						soma = USARTString_rec[10];	 // Recebe dados MSB		
 						SENSOR_06_L_CONTROL = 256 * soma;
 						soma = USARTString_rec[11];	 // Recebe dados LSB		
-					    SENSOR_06_L_CONTROL = soma;
+					    SENSOR_06_L_CONTROL = SENSOR_06_L_CONTROL + soma;
 
 						//Recebe dados de umidade do sensor
 						soma = USARTString_rec[12];	 // Recebe dados MSB		
-						SENSOR_06_L_CONTROL = 256 * soma;
+						SENSOR_06_U_CONTROL = 256 * soma;
 						soma = USARTString_rec[13];	 // Recebe dados LSB		
-					    SENSOR_06_L_CONTROL = soma;						
+					    SENSOR_06_U_CONTROL = SENSOR_06_U_CONTROL + soma;						
 
 						//Valida valores dos sensores para envio de TRAP
 						ValidaLimitesSensor(SENSOR_06_ID, SENSOR_06_P_CONTROL, PRESSAO);		
@@ -1010,25 +1010,25 @@ static void ProcessIO(void)
 						soma = USARTString_rec[6];   // Recebe dados MSB			
 						SENSOR_07_P_CONTROL = 256 * soma;
 						soma = USARTString_rec[7];	 // Recebe dados LSB		
-					    SENSOR_07_P_CONTROL = soma;
+					    SENSOR_07_P_CONTROL = SENSOR_07_P_CONTROL + soma;
 
 						//Recebe dados de temperatura do sensor
 						soma = USARTString_rec[8];	 // Recebe dados MSB		
 						SENSOR_07_T_CONTROL = 256 * soma;
 						soma = USARTString_rec[9];	 // Recebe dados LSB		
-					    SENSOR_07_T_CONTROL = soma;
+					    SENSOR_07_T_CONTROL = SENSOR_07_T_CONTROL + soma;
 
 						//Recebe dados de luminosidade do sensor
 						soma = USARTString_rec[10];	 // Recebe dados MSB		
 						SENSOR_07_L_CONTROL = 256 * soma;
 						soma = USARTString_rec[11];	 // Recebe dados LSB		
-					    SENSOR_07_L_CONTROL = soma;
+					    SENSOR_07_L_CONTROL = SENSOR_07_L_CONTROL + soma;
 
 						//Recebe dados de umidade do sensor
 						soma = USARTString_rec[12];	 // Recebe dados MSB		
-						SENSOR_07_L_CONTROL = 256 * soma;
+						SENSOR_07_U_CONTROL = 256 * soma;
 						soma = USARTString_rec[13];	 // Recebe dados LSB		
-					    SENSOR_07_L_CONTROL = soma;
+					    SENSOR_07_U_CONTROL = SENSOR_07_U_CONTROL + soma;
 						
 						//Valida valores dos sensores para envio de TRAP
 						ValidaLimitesSensor(SENSOR_07_ID, SENSOR_07_P_CONTROL, PRESSAO);		
@@ -1050,25 +1050,25 @@ static void ProcessIO(void)
 						soma = USARTString_rec[6];   // Recebe dados MSB			
 						SENSOR_08_P_CONTROL = 256 * soma;
 						soma = USARTString_rec[7];	 // Recebe dados LSB		
-					    SENSOR_08_P_CONTROL = soma;
+					    SENSOR_08_P_CONTROL = SENSOR_08_P_CONTROL + soma;
 
 						//Recebe dados de temperatura do sensor
 						soma = USARTString_rec[8];	 // Recebe dados MSB		
 						SENSOR_08_T_CONTROL = 256 * soma;
 						soma = USARTString_rec[9];	 // Recebe dados LSB		
-					    SENSOR_08_T_CONTROL = soma;
+					    SENSOR_08_T_CONTROL = SENSOR_08_T_CONTROL + soma;
 
 						//Recebe dados de luminosidade do sensor
 						soma = USARTString_rec[10];	 // Recebe dados MSB		
 						SENSOR_08_L_CONTROL = 256 * soma;
 						soma = USARTString_rec[11];	 // Recebe dados LSB		
-					    SENSOR_08_L_CONTROL = soma;
+					    SENSOR_08_L_CONTROL = SENSOR_08_L_CONTROL + soma;
 
 						//Recebe dados de umidade do sensor
 						soma = USARTString_rec[12];	 // Recebe dados MSB		
-						SENSOR_08_L_CONTROL = 256 * soma;
+						SENSOR_08_U_CONTROL = 256 * soma;
 						soma = USARTString_rec[13];	 // Recebe dados LSB		
-					    SENSOR_08_L_CONTROL = soma;						
+					    SENSOR_08_U_CONTROL = SENSOR_08_U_CONTROL + soma;						
 
 						//Valida valores dos sensores para envio de TRAP
 						ValidaLimitesSensor(SENSOR_08_ID, SENSOR_08_P_CONTROL, PRESSAO);		
@@ -1091,25 +1091,25 @@ static void ProcessIO(void)
 						soma = USARTString_rec[6];   // Recebe dados MSB			
 						SENSOR_09_P_CONTROL = 256 * soma;
 						soma = USARTString_rec[7];	 // Recebe dados LSB		
-					    SENSOR_09_P_CONTROL = soma;
+					    SENSOR_09_P_CONTROL = SENSOR_09_P_CONTROL + soma;
 
 						//Recebe dados de temperatura do sensor
 						soma = USARTString_rec[8];	 // Recebe dados MSB		
 						SENSOR_09_T_CONTROL = 256 * soma;
 						soma = USARTString_rec[9];	 // Recebe dados LSB		
-					    SENSOR_09_T_CONTROL = soma;
+					    SENSOR_09_T_CONTROL = SENSOR_09_T_CONTROL + soma;
 
 						//Recebe dados de luminosidade do sensor
 						soma = USARTString_rec[10];	 // Recebe dados MSB		
 						SENSOR_09_L_CONTROL = 256 * soma;
 						soma = USARTString_rec[11];	 // Recebe dados LSB		
-					    SENSOR_09_L_CONTROL = soma;
+					    SENSOR_09_L_CONTROL = SENSOR_09_L_CONTROL + soma;
 
 						//Recebe dados de umidade do sensor
 						soma = USARTString_rec[12];	 // Recebe dados MSB		
-						SENSOR_09_L_CONTROL = 256 * soma;
+						SENSOR_09_U_CONTROL = 256 * soma;
 						soma = USARTString_rec[13];	 // Recebe dados LSB		
-					    SENSOR_09_L_CONTROL = soma;						
+					    SENSOR_09_U_CONTROL = SENSOR_09_U_CONTROL + soma;						
 
 						//Valida valores dos sensores para envio de TRAP
 						ValidaLimitesSensor(SENSOR_09_ID, SENSOR_09_P_CONTROL, PRESSAO);		
@@ -1131,25 +1131,25 @@ static void ProcessIO(void)
 						soma = USARTString_rec[6];   // Recebe dados MSB			
 						SENSOR_10_P_CONTROL = 256 * soma;
 						soma = USARTString_rec[7];	 // Recebe dados LSB		
-					    SENSOR_10_P_CONTROL = soma;
+					    SENSOR_10_P_CONTROL = SENSOR_10_P_CONTROL + soma;
 
 						//Recebe dados de temperatura do sensor
 						soma = USARTString_rec[8];	 // Recebe dados MSB		
 						SENSOR_10_T_CONTROL = 256 * soma;
 						soma = USARTString_rec[9];	 // Recebe dados LSB		
-					    SENSOR_10_T_CONTROL = soma;
+					    SENSOR_10_T_CONTROL = SENSOR_10_T_CONTROL + soma;
 
 						//Recebe dados de luminosidade do sensor
 						soma = USARTString_rec[10];	 // Recebe dados MSB		
 						SENSOR_10_L_CONTROL = 256 * soma;
 						soma = USARTString_rec[11];	 // Recebe dados LSB		
-					    SENSOR_10_L_CONTROL = soma;
+					    SENSOR_10_L_CONTROL = SENSOR_10_L_CONTROL + soma;
 
 						//Recebe dados de umidade do sensor
 						soma = USARTString_rec[12];	 // Recebe dados MSB		
-						SENSOR_10_L_CONTROL = 256 * soma;
+						SENSOR_10_U_CONTROL = 256 * soma;
 						soma = USARTString_rec[13];	 // Recebe dados LSB		
-					    SENSOR_10_L_CONTROL = soma;						
+					    SENSOR_10_U_CONTROL = SENSOR_10_U_CONTROL + soma;						
 
 						//Valida valores dos sensores para envio de TRAP
 						ValidaLimitesSensor(SENSOR_10_ID, SENSOR_10_P_CONTROL, PRESSAO);		
