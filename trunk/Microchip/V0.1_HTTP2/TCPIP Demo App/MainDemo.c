@@ -3123,10 +3123,7 @@ BOOL SNMPGetVar(SNMP_ID var, SNMP_INDEX index, BYTE *ref, SNMP_VAL* val)
 	/******************************************************************************************************
 	* INICIO DO CONTROLE DOS SENSORES
 	* RETORNA OS VALORES ARMAZENADOS NA MIB PARA OS SENSORES SOLICITADOS 
-	/******************************************************************************************************/
-	case SENSOR_01_ID:
-		//NÃO SETA ESTA VARIÁVEL DEVIDO A SER INDICE DOS VALORES DO SENSOR
-		return TRUE;		
+	/******************************************************************************************************/		
 
 	case SENSOR_01_P:
 		val->byte = SENSOR_01_P_CONTROL;
@@ -3144,10 +3141,6 @@ BOOL SNMPGetVar(SNMP_ID var, SNMP_INDEX index, BYTE *ref, SNMP_VAL* val)
 		val->byte = SENSOR_01_U_CONTROL;
 		return TRUE;
 
-    case SENSOR_02_ID:
-		//NÃO SETA ESTA VARIÁVEL DEVIDO A SER INDICE DOS VALORES DO SENSOR
-		return TRUE;		
-
 	case SENSOR_02_P:
 		val->byte = SENSOR_02_P_CONTROL;
 		return TRUE;
@@ -3163,10 +3156,6 @@ BOOL SNMPGetVar(SNMP_ID var, SNMP_INDEX index, BYTE *ref, SNMP_VAL* val)
 	case SENSOR_02_U:
 		val->byte = SENSOR_02_U_CONTROL;
 		return TRUE;
-
-    case SENSOR_03_ID:
-		//NÃO SETA ESTA VARIÁVEL DEVIDO A SER INDICE DOS VALORES DO SENSOR
-		return TRUE;		
 
 	case SENSOR_03_P:
 		val->byte = SENSOR_03_P_CONTROL;
@@ -3184,10 +3173,6 @@ BOOL SNMPGetVar(SNMP_ID var, SNMP_INDEX index, BYTE *ref, SNMP_VAL* val)
 		val->byte = SENSOR_03_U_CONTROL;
 		return TRUE;
 
-    case SENSOR_04_ID:
-		//NÃO SETA ESTA VARIÁVEL DEVIDO A SER INDICE DOS VALORES DO SENSOR
-		return TRUE;		
-
 	case SENSOR_04_P:
 		val->byte = SENSOR_04_P_CONTROL;
 		return TRUE;
@@ -3202,10 +3187,6 @@ BOOL SNMPGetVar(SNMP_ID var, SNMP_INDEX index, BYTE *ref, SNMP_VAL* val)
 
 	case SENSOR_04_U:
 		val->byte = SENSOR_04_U_CONTROL;
-		return TRUE;
-
-    case SENSOR_05_ID:
-		//NÃO SETA ESTA VARIÁVEL DEVIDO A SER INDICE DOS VALORES DO SENSOR
 		return TRUE;		
 
 	case SENSOR_05_P:
@@ -3222,10 +3203,6 @@ BOOL SNMPGetVar(SNMP_ID var, SNMP_INDEX index, BYTE *ref, SNMP_VAL* val)
 
 	case SENSOR_05_U:
 		val->byte = SENSOR_05_U_CONTROL;
-		return TRUE;
-
-    case SENSOR_06_ID:
-   		//NÃO SETA ESTA VARIÁVEL DEVIDO A SER INDICE DOS VALORES DO SENSOR
 		return TRUE;		
 
 	case SENSOR_06_P:
@@ -3242,10 +3219,6 @@ BOOL SNMPGetVar(SNMP_ID var, SNMP_INDEX index, BYTE *ref, SNMP_VAL* val)
 
 	case SENSOR_06_U:
 		val->byte = SENSOR_06_U_CONTROL;
-		return TRUE;
-
-    case SENSOR_07_ID:
-   		//NÃO SETA ESTA VARIÁVEL DEVIDO A SER INDICE DOS VALORES DO SENSOR
 		return TRUE;		
 
 	case SENSOR_07_P:
@@ -3262,10 +3235,6 @@ BOOL SNMPGetVar(SNMP_ID var, SNMP_INDEX index, BYTE *ref, SNMP_VAL* val)
 
 	case SENSOR_07_U:
 		val->byte = SENSOR_07_U_CONTROL;
-		return TRUE;
-
-    case SENSOR_08_ID:
-   		//NÃO SETA ESTA VARIÁVEL DEVIDO A SER INDICE DOS VALORES DO SENSOR
 		return TRUE;		
 
 	case SENSOR_08_P:
@@ -3282,10 +3251,6 @@ BOOL SNMPGetVar(SNMP_ID var, SNMP_INDEX index, BYTE *ref, SNMP_VAL* val)
 
 	case SENSOR_08_U:
 		val->byte = SENSOR_08_U_CONTROL;
-		return TRUE;
-
-    case SENSOR_09_ID:
-   		//NÃO SETA ESTA VARIÁVEL DEVIDO A SER INDICE DOS VALORES DO SENSOR
 		return TRUE;		
 
 	case SENSOR_09_P:
@@ -3302,10 +3267,6 @@ BOOL SNMPGetVar(SNMP_ID var, SNMP_INDEX index, BYTE *ref, SNMP_VAL* val)
 
 	case SENSOR_09_U:
 		val->byte = SENSOR_09_U_CONTROL;
-		return TRUE;
-
-    case SENSOR_10_ID:
-   		//NÃO SETA ESTA VARIÁVEL DEVIDO A SER INDICE DOS VALORES DO SENSOR
 		return TRUE;		
 
 	case SENSOR_10_P:
