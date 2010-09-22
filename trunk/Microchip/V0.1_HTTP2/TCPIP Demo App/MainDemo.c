@@ -220,14 +220,14 @@ static void SMTPDemo(void);
 #if defined(STACK_USE_ICMP_CLIENT)
 static void PingDemo(void);
 #endif
-#if defined(STACK_USE_SNMP_SERVER) && !defined(SNMP_TRAP_DISABLED)
-static void SNMPTrapDemo(void);
-#endif
-
 #if defined(STACK_USE_UART)
 	static void SetConfig(void);
 #endif
 */
+
+#if defined(STACK_USE_SNMP_SERVER) && !defined(SNMP_TRAP_DISABLED)
+static void SNMPTrapDemo(SNMP_ID var, SNMP_VAL val, BYTE notificationCode);
+#endif
 
 
 // ---------------------------------Definição das interrupções---------------------------------//
@@ -628,60 +628,68 @@ static void DisplayIPValue(IP_ADDR IPVal)
 */
 void ValidaLimitesSensor(BYTE sensor_id, short long valor_sensor, GRANDEZA grandeza)
 {	
+	
 	/*
+	* NOTIFICATION CODE - CODIGO DE ERRO ENVIADO PARA O AGENTE
+	* 10 - VALOR DO SENSOR ABAIXO DA PRESSAO MINIMA PERMITIDA
+	* 11 - VALOR DO SENSOR ACIMA DA PRESSAO MAXIMA PERMITIDA
+	* 21 - VALOR DO SENSOR ABAIXO DA TEMPERATURA MINIMA PERMITIDA
+	* 22 - VALOR DO SENSOR ACIMA DA TEMPERATURA MAXIMA PERMITIDA
+	* 31 - VALOR DO SENSOR ABAIXO DA LUMINOSIDADE MINIMA PERMITIDA
+	* 32 - VALOR DO SENSOR ACIMA DA LUMINOSIDADE MAXIMA PERMITIDA
+	* 41 - VALOR DO SENSOR ABAIXO DA UMIDADE MINIMA PERMITIDA
+	* 42 - VALOR DO SENSOR ACIMA DA UMIDADE MAXIMA PERMITIDA
+	*/
+
+	SNMP_VAL val;
+
+	val.word = (WORD)valor_sensor;
+
 	switch(grandeza)
 	{
 		case PRESSAO:
 			if (valor_sensor <= PRESSAO_MIN_CONTROL)
 			{	
-				//TODO: Implementar envio de TRAP
-			 	sensor_id--;
+				SNMPTrapDemo(sensor_id, val,10);
 			}
 			if (valor_sensor >= PRESSAO_MAX_CONTROL)
-				//TODO: Implementar envio de TRAP
-			 	sensor_id++;
+			{
+				SNMPTrapDemo(sensor_id, val,11);
 			}
 		break;				
 		case TEMPERATURA:
 			if (valor_sensor <= TEMPERATURA_MIN_CONTROL)
 			{
-				//TODO: Implementar envio de TRAP
-				sensor_id++;
+				SNMPTrapDemo(sensor_id, val,21);
 			}
 			if (valor_sensor >= TEMPERATURA_MAX_CONTROL)
 			{
-				//TODO: Implementar envio de TRAP
-				sensor_id--;
+				SNMPTrapDemo(sensor_id, val,22);
 			}
 		break;
 		case LUMINOSIDADE:
 			if (valor_sensor <= LUMINOSIDADE_MIN_CONTROL)
 			{
-				//TODO: Implementar envio de TRAP
-				sensor_id++;
+				SNMPTrapDemo(sensor_id, val,31);
 			}
 			if (valor_sensor >= LUMINOSIDADE_MAX_CONTROL)
 			{
-				//TODO: Implementar envio de TRAP
-				sensor_id--;
+				SNMPTrapDemo(sensor_id, val,32);
 			}
 		break;
 		case UMIDADE:
 			if (valor_sensor <= UMIDADE_MIN_CONTROL)
 			{
-				//TODO: Implementar envio de TRAP
-				sensor_id++;
+				SNMPTrapDemo(sensor_id, val,41);
 			}
 			if (valor_sensor >= UMIDADE_MAX_CONTROL)
 			{
-				//TODO: Implementar envio de TRAP
-				sensor_id--;
+				SNMPTrapDemo(sensor_id, val,42);
 			}
 		break;
 		default:
 			break;
 	}
-	*/
 }
 
 
@@ -2721,6 +2729,56 @@ void FormatNetBIOSName(BYTE Name[])
 #if defined(STACK_USE_SNMP_SERVER)
 
 #if !defined(SNMP_TRAP_DISABLED)
+
+
+static DWORD SNMPGetTimeStamp(void)
+{
+
+	DWORD_VAL dwvHigh, dwvLow;
+    DWORD dw;
+    DWORD timeStamp;
+	
+	//TimeStamp
+	// Get all 48 bits of the internal Tick timer
+    do
+   	{
+	   	dwvHigh.Val = TickGetDiv64K();
+	   	dwvLow.Val = TickGet();
+	} while(dwvHigh.w[0] != dwvLow.w[1]);
+    dwvHigh.Val = dwvHigh.w[1];
+    
+	// Find total contribution from lower DWORD
+    dw = dwvLow.Val/(DWORD)TICK_SECOND;
+    timeStamp = dw*100ul;
+    dw = (dwvLow.Val - dw*(DWORD)TICK_SECOND)*100ul;		// Find fractional seconds and convert to 10ms ticks
+    timeStamp += (dw+((DWORD)TICK_SECOND/2ul))/(DWORD)TICK_SECOND;
+
+	// Itteratively add in the contribution from upper WORD
+	while(dwvHigh.Val >= 0x1000ul)
+	{
+		timeStamp += (0x100000000000ull*100ull+(TICK_SECOND/2ull))/TICK_SECOND;
+		dwvHigh.Val -= 0x1000;
+	}	
+	while(dwvHigh.Val >= 0x100ul)
+	{
+		timeStamp += (0x010000000000ull*100ull+(TICK_SECOND/2ull))/TICK_SECOND;
+		dwvHigh.Val -= 0x100;
+	}	
+	while(dwvHigh.Val >= 0x10ul)
+	{
+		timeStamp += (0x001000000000ull*100ull+(TICK_SECOND/2ull))/TICK_SECOND;
+		dwvHigh.Val -= 0x10;
+	}	
+	while(dwvHigh.Val)
+	{
+		timeStamp += (0x000100000000ull*100ull+(TICK_SECOND/2ull))/TICK_SECOND;
+		dwvHigh.Val--;
+	}
+    
+    return timeStamp;
+}
+
+
 /*
 * Trap information.
 * This table maintains list of intereseted receivers
@@ -2749,68 +2807,163 @@ typedef struct _TRAP_INFO
 */
 TRAP_INFO trapInfo = { TRAP_TABLE_SIZE };
 
-static BOOL SendNotification(BYTE receiverIndex, SNMP_ID var, SNMP_VAL val)
+/**************************************************************************
+  Function:
+ 	void SNMPSendTrap(void)
+ 
+  Summary:	
+  	 Prepare, validate remote node which will receive trap and send trap pdu.
+ 	 	  
+  Description:		
+     This function is used to send trap notification to previously 
+     configured ip address if trap notification is enabled. There are
+     different trap notification code. The current implementation
+     sends trap for authentication failure (4).
+  
+  PreCondition:
+ 	 If application defined event occurs to send the trap.
+ 
+  parameters:
+     None.
+ 
+  Returns:          
+ 	 None.
+ 
+  Remarks:
+     This is a callback function called by the application on certain 
+     predefined events. This routine only implemented to send a 
+     authentication failure Notification-type macro with PUSH_BUTTON
+     oid stored in MPFS. If the ARP is no resolved i.e. if 
+     SNMPIsNotifyReady() returns FALSE, this routine times 
+     out in 5 seconds. This routine should be modified according to 
+     event occured and should update corrsponding OID and notification
+     type to the trap pdu.
+ *************************************************************************/
+void SNMPSendTrap(BYTE receiverIndex, SNMP_ID var, SNMP_VAL val, BYTE notificationCode)
 {
-    static enum { SM_PREPARE, SM_NOTIFY_WAIT } smState = SM_PREPARE;
-    IP_ADDR IPAddress;
+	static BYTE timeLock=FALSE;
+	//static BYTE receiverIndex=0; ///is application specific
+	IP_ADDR remHostIPAddress,* remHostIpAddrPtr;
+	//SNMP_VAL val;
+	static DWORD TimerRead;
 
-    // Convert local to network order.
-    IPAddress.v[0] = trapInfo.table[receiverIndex].IPAddress.v[3];
-    IPAddress.v[1] = trapInfo.table[receiverIndex].IPAddress.v[2];
-    IPAddress.v[2] = trapInfo.table[receiverIndex].IPAddress.v[1];
-    IPAddress.v[3] = trapInfo.table[receiverIndex].IPAddress.v[0];
+	static enum 
+	{
+		SM_PREPARE,
+		SM_NOTIFY_WAIT 
+	} smState = SM_PREPARE;
 
-    switch(smState)
-    {
-	    case SM_PREPARE:
-	        SNMPNotifyPrepare(&IPAddress,
-	                          trapInfo.table[receiverIndex].community,
-	                          trapInfo.table[receiverIndex].communityLen,
-	                          MICROCHIP,            // Agent ID Var
-	                          6,                    // Notification code
-	                          (DWORD)TickGet());
-	        smState = SM_NOTIFY_WAIT;
+
+
+	if(trapInfo.table[receiverIndex].Flags.bEnabled)
+	{
+		remHostIPAddress.v[0] = trapInfo.table[receiverIndex].IPAddress.v[3];
+		remHostIPAddress.v[1] = trapInfo.table[receiverIndex].IPAddress.v[2];
+		remHostIPAddress.v[2] = trapInfo.table[receiverIndex].IPAddress.v[1];
+		remHostIPAddress.v[3] = trapInfo.table[receiverIndex].IPAddress.v[0];
+		remHostIpAddrPtr = &remHostIPAddress;
+		if(timeLock==(BYTE)FALSE)
+		{
+			TimerRead=TickGet();
+			timeLock=TRUE;
+		}
+	}	
+	else
+	{
+		receiverIndex++;
+		if((receiverIndex == (BYTE)TRAP_TABLE_SIZE))
+		{
+			receiverIndex=0;
+			timeLock=FALSE;
+//			gSendTrapFlag=FALSE;	
+			UDPDiscard();
+		}
+		return;
+		
+	}
+		
+	switch(smState)
+	{
 	
-	        break;
-	
-	    case SM_NOTIFY_WAIT:
-	        if ( SNMPIsNotifyReady(&IPAddress) )
-	        {
-	            smState = SM_PREPARE;
-	            SNMPNotify(var, val, 0);
-	            return TRUE;
-	        }
-    }
-    return FALSE;
+		case SM_PREPARE:
+
+			SNMPNotifyPrepare(remHostIpAddrPtr,trapInfo.table[receiverIndex].community,
+						trapInfo.table[receiverIndex].communityLen,
+						MICROCHIP,			  // Agent ID Var
+						notificationCode, //gSpecificTrapNotification,					  // Notification code.
+						SNMPGetTimeStamp());
+			smState++;
+			break;
+			
+		case SM_NOTIFY_WAIT:
+			if(SNMPIsNotifyReady(remHostIpAddrPtr))
+			{
+				smState = SM_PREPARE;
+		 		val.byte = 0;
+				receiverIndex++;
+
+				//application has to decide on which SNMP var OID to send. Ex. PUSH_BUTTON	
+				SNMPNotify(var, val, 0);
+            	smState = SM_PREPARE;
+				UDPDiscard();
+				break;
+			}
+	}	
+		
+	//Try for max 5 seconds to send TRAP, do not get block in while()
+	if((TickGet()-TimerRead)>(5*TICK_SECOND)|| (receiverIndex == (BYTE)TRAP_TABLE_SIZE))
+	{
+		UDPDiscard();
+		smState = SM_PREPARE;
+		receiverIndex=0;
+		timeLock=FALSE;
+//		gSendTrapFlag=FALSE;
+		return;
+	}
+
 }
 
-static void SNMPTrapDemo(void)
+
+/**************************************************************************
+  Function:
+ 	void SNMPTrapDemo(SNMP_ID var, SNMP_VAL val, BYTE notificationCode)
+ 
+  Summary:	
+  	Send trap pdu demo application.
+ 	  	  
+  Description:		
+	This routine sends a trap pdu for the predefined ip addresses with the
+	agent. The "event" to generate this trap pdu is "BUTTON_PUSH_EVENT". Whenever
+	there occurs a specific button push, this routine is called and sends
+	a trap containing PUSH_BUTTON mib var OID and notification type 
+	as authentication failure. 
+       
+  PreCondition:
+ 	Application defined event occurs to send the trap.
+ 	
+  parameters:
+     None.
+ 
+  Returns:          
+ 	 None.
+ 
+  Remarks:
+    This routine guides how to build a event generated trap notification.
+    The application should make use of SNMPSendTrap() routine to generate 
+    and send trap.
+ *************************************************************************/
+static void SNMPTrapDemo(SNMP_ID var, SNMP_VAL val, BYTE notificationCode)
 {
-    static BOOL lbNotify = FALSE;
     static BYTE i = 0;
-    SNMP_VAL val;
 
-    if ( BUTTON3_IO == 0 && !lbNotify )
-        lbNotify = TRUE;
-
-    if ( i == trapInfo.Size )
+    if ( trapInfo.table[i].Flags.bEnabled )
     {
-        i = 0;
-        lbNotify = FALSE;
-    }
-
-    if ( lbNotify )
-    {
-        if ( trapInfo.table[i].Flags.bEnabled )
-        {
-           val.byte = 0;
-            if ( SendNotification(i, PUSH_BUTTON, val) )
-                i++;
-        }
-        else
-            i++;
+    	val.byte = 0;
+        SNMPSendTrap(i, var , val,notificationCode);
     }
 }
+
+
 #endif
 
 BOOL SNMPValidate(SNMP_ACTION SNMPAction, char* community)
