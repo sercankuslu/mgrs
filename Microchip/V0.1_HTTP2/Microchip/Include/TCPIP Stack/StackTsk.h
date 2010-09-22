@@ -61,7 +61,7 @@
 
 // Check for potential configuration errors in "TCPIPConfig.h"
 #if (MAX_UDP_SOCKETS <= 0 || MAX_UDP_SOCKETS > 255 )
-#error Invlaid MAX_UDP_SOCKETS value specified
+#error Invalid MAX_UDP_SOCKETS value specified
 #endif
 
 // Check for potential configuration errors in "TCPIPConfig.h"

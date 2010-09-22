@@ -3702,9 +3702,6 @@ static BOOL GetOIDStringByID(SNMP_ID id, OID_INFO *info, BYTE *oidString, BYTE *
 }
 #endif
 
-
-
-
 static BOOL GetOIDStringByAddr(OID_INFO *rec, BYTE *oidString, BYTE *len)
 {
     DWORD hTarget;
