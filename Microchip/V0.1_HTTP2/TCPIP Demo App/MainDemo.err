@@ -1,4 +1,3 @@
-Warning[2065] C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\MainDemo.c 3444 : static function 'SNMPTrapDemo' never referenced
-Warning[2065] C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\MainDemo.c 3444 : static function 'SetConfig' never referenced
-Warning[2065] C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\MainDemo.c 3444 : static function 'PingDemo' never referenced
-Warning[2065] C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\MainDemo.c 3444 : static function 'SMTPDemo' never referenced
+Warning[2065] C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\MainDemo.c 3597 : static function 'SetConfig' never referenced
+Warning[2065] C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\MainDemo.c 3597 : static function 'PingDemo' never referenced
+Warning[2065] C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\MainDemo.c 3597 : static function 'SMTPDemo' never referenced

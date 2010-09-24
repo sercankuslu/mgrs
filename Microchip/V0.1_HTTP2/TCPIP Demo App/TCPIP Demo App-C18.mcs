@@ -13,7 +13,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File001]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\ARP.o
 Folder=Intermediary
@@ -26,7 +26,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File002]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\Delay.o
 Folder=Intermediary
@@ -39,7 +39,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File003]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\DHCP.o
 Folder=Intermediary
@@ -52,7 +52,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File004]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\DNS.o
 Folder=Intermediary
@@ -65,7 +65,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File005]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\FTP.o
 Folder=Intermediary
@@ -78,7 +78,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File006]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\GenericTCPClient.o
 Folder=Intermediary
@@ -91,7 +91,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File007]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\GenericTCPServer.o
 Folder=Intermediary
@@ -104,7 +104,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File008]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\Helpers.o
 Folder=Intermediary
@@ -117,7 +117,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File009]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\HTTP.o
 Folder=Intermediary
@@ -130,7 +130,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File010]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\ICMP.o
 Folder=Intermediary
@@ -143,7 +143,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File011]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\IP.o
 Folder=Intermediary
@@ -156,7 +156,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File012]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\LCDBlocking.o
 Folder=Intermediary
@@ -169,7 +169,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File013]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\MPFS.o
 Folder=Intermediary
@@ -182,7 +182,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File014]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\NBNS.o
 Folder=Intermediary
@@ -195,7 +195,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File015]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\SMTP.o
 Folder=Intermediary
@@ -208,7 +208,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File016]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\SNMP.o
 Folder=Intermediary
@@ -221,7 +221,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File017]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\SPIEEPROM.o
 Folder=Intermediary
@@ -234,7 +234,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File018]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\StackTsk.o
 Folder=Intermediary
@@ -247,7 +247,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File019]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\TCP.o
 Folder=Intermediary
@@ -260,7 +260,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File020]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\Telnet.o
 Folder=Intermediary
@@ -273,7 +273,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File021]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\TFTPc.o
 Folder=Intermediary
@@ -286,7 +286,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File022]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\Tick.o
 Folder=Intermediary
@@ -299,7 +299,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File023]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\UART.o
 Folder=Intermediary
@@ -312,7 +312,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File024]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\UDP.o
 Folder=Intermediary
@@ -325,7 +325,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File025]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\Objects - TCPIP Demo App-C18\MainDemo.o
 Folder=Intermediary
@@ -338,7 +338,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File026]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\ENC28J60.o
 Folder=Intermediary
@@ -351,7 +351,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File027]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\ETH97J60.o
 Folder=Intermediary
@@ -364,7 +364,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File028]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\UDPPerformanceTest.o
 Folder=Intermediary
@@ -377,7 +377,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File029]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\TCPPerformanceTest.o
 Folder=Intermediary
@@ -390,7 +390,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File030]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\Reboot.o
 Folder=Intermediary
@@ -403,7 +403,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File031]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\DHCPs.o
 Folder=Intermediary
@@ -416,7 +416,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File032]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\Objects - TCPIP Demo App-C18\MPFSImg.o
 Folder=Intermediary
@@ -429,7 +429,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File033]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\UART2TCPBridge.o
 Folder=Intermediary
@@ -442,7 +442,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File034]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\HTTP2.o
 Folder=Intermediary
@@ -455,7 +455,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File035]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\Hashes.o
 Folder=Intermediary
@@ -468,7 +468,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File036]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\Objects - TCPIP Demo App-C18\CustomHTTPApp.o
 Folder=Intermediary
@@ -481,7 +481,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File037]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\SNTP.o
 Folder=Intermediary
@@ -494,7 +494,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File038]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\MPFS2.o
 Folder=Intermediary
@@ -507,7 +507,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File039]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\Objects - TCPIP Demo App-C18\MPFSImg2.o
 Folder=Intermediary
@@ -520,7 +520,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File040]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\Microchip\TCPIP Stack\Objects - TCPIP Demo App-C18\SPIRAM.o
 Folder=Intermediary
@@ -533,7 +533,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=-k -sco -mL -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
-DebugOptions=-D__DEBUG
+DebugOptions=
 [File041]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\TCPIP Demo App-C18.cof
 Folder=Output
@@ -546,7 +546,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
 TraceCmdString=
-DebugOptions=/z__MPLAB_DEBUG=1
+DebugOptions=
 [File042]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\TCPIP Demo App-C18.hex
 Folder=Output
@@ -559,7 +559,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
 TraceCmdString=
-DebugOptions=/z__MPLAB_DEBUG=1
+DebugOptions=
 [File043]
 Location=C:\Projeto TCC\mgrs\Microchip\V0.1_HTTP2\TCPIP Demo App\TCPIP Demo App-C18.map
 Folder=Output
@@ -572,7 +572,7 @@ SOLK=<src>|..\Microchip\TCPIP Stack\Announce.c|..\Microchip\TCPIP Stack\ARP.c|..
 SuiteArgsString=
 ToolArgsString=/m"$(BINDIR_)$(TARGETBASE).map" /w /o"$(BINDIR_)$(TARGETBASE).cof"
 TraceCmdString=
-DebugOptions=/z__MPLAB_DEBUG=1
+DebugOptions=
 [TOOL_LOC_STAMPS]
 tool_loc{96C98149-AA1B-4CF9-B967-FAE79CAB663C}=C:\MCC18\bin\mplink.exe
 tool_loc{E56A1C86-9D32-4DF6-8C34-FE0388B1B644}=C:\MCC18\bin\mcc18.exe
