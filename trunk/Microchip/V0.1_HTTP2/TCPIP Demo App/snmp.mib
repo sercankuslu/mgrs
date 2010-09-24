@@ -127,23 +127,23 @@ $DynamicVar(LCD_DISPLAY, 249)
 - Declaracao do sensor01
 ----------------------------------------------------------------------------
 microchip.control.rede.sensor01.ID
-$DeclareVar(SENSOR_01_ID,BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.4.1)
+$DeclareVar(SENSOR_01_ID,BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.3.10)
 $StaticVar(SENSOR_01_ID, 10)
 
 microchip.control.rede.sensor01.LUMINOSIDADE
-$DeclareVar(SENSOR_01_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.11)
+$DeclareVar(SENSOR_01_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.11)
 $DynamicVar(SENSOR_01_L, 11)
 
 microchip.control.rede.sensor01.UMIDADE
-$DeclareVar(SENSOR_01_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.12)
+$DeclareVar(SENSOR_01_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.12)
 $DynamicVar(SENSOR_01_U, 12)
 
 microchip.control.rede.sensor01.PRESSAO
-$DeclareVar(SENSOR_01_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.13)
+$DeclareVar(SENSOR_01_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.13)
 $DynamicVar(SENSOR_01_P, 13)
 
 microchip.control.rede.sensor01.TEMPERATURA
-$DeclareVar(SENSOR_01_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.14)
+$DeclareVar(SENSOR_01_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.14)
 $DynamicVar(SENSOR_01_T, 14)
 
 ----------------------------------------------------------------------------
@@ -154,23 +154,23 @@ $DynamicVar(SENSOR_01_T, 14)
 ----------------------------------------------------------------------------
 
 microchip.control.rede.sensor02.ID
-$DeclareVar(SENSOR_02_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.4.2)
+$DeclareVar(SENSOR_02_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.3.20)
 $StaticVar(SENSOR_02_ID, 20)
 
 microchip.control.rede.sensor02.LUMINOSIDADE
-$DeclareVar(SENSOR_02_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.21)
+$DeclareVar(SENSOR_02_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.21)
 $DynamicVar(SENSOR_02_L, 21)
 
 microchip.control.rede.sensor02.UMIDADE
-$DeclareVar(SENSOR_02_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.22)
+$DeclareVar(SENSOR_02_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.22)
 $DynamicVar(SENSOR_02_U, 22)
 
 microchip.control.rede.sensor02.PRESSAO
-$DeclareVar(SENSOR_02_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.23)
+$DeclareVar(SENSOR_02_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.23)
 $DynamicVar(SENSOR_02_P, 23)
 
 microchip.control.rede.sensor02.TEMPERATURA
-$DeclareVar(SENSOR_02_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.24)
+$DeclareVar(SENSOR_02_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.24)
 $DynamicVar(SENSOR_02_T, 24)
 
 ----------------------------------------------------------------------------
@@ -181,23 +181,23 @@ $DynamicVar(SENSOR_02_T, 24)
 ----------------------------------------------------------------------------
 
 microchip.control.rede.sensor03.ID
-$DeclareVar(SENSOR_03_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.4.3)
+$DeclareVar(SENSOR_03_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.3.30)
 $StaticVar(SENSOR_03_ID, 30)
 
 microchip.control.rede.sensor03.LUMINOSIDADE
-$DeclareVar(SENSOR_03_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.31)
+$DeclareVar(SENSOR_03_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.31)
 $DynamicVar(SENSOR_03_L, 31)
 
 microchip.control.rede.sensor03.UMIDADE
-$DeclareVar(SENSOR_03_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.32)
+$DeclareVar(SENSOR_03_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.32)
 $DynamicVar(SENSOR_03_U, 32)
 
 microchip.control.rede.sensor03.PRESSAO
-$DeclareVar(SENSOR_03_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.33)
+$DeclareVar(SENSOR_03_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.33)
 $DynamicVar(SENSOR_03_P, 33)
 
 microchip.control.rede.sensor03.TEMPERATURA
-$DeclareVar(SENSOR_03_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.34)
+$DeclareVar(SENSOR_03_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.34)
 $DynamicVar(SENSOR_03_T, 34)
 
 ----------------------------------------------------------------------------
@@ -208,23 +208,23 @@ $DynamicVar(SENSOR_03_T, 34)
 ----------------------------------------------------------------------------
 
 microchip.control.rede.sensor04.ID
-$DeclareVar(SENSOR_04_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.4.4)
+$DeclareVar(SENSOR_04_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.3.40)
 $StaticVar(SENSOR_04_ID, 40)
 
 microchip.control.rede.sensor04.LUMINOSIDADE
-$DeclareVar(SENSOR_04_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.41)
+$DeclareVar(SENSOR_04_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.41)
 $DynamicVar(SENSOR_04_L, 41)
 
 microchip.control.rede.sensor04.UMIDADE
-$DeclareVar(SENSOR_04_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.42)
+$DeclareVar(SENSOR_04_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.42)
 $DynamicVar(SENSOR_04_U, 42)
 
 microchip.control.rede.sensor04.PRESSAO
-$DeclareVar(SENSOR_04_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.43)
+$DeclareVar(SENSOR_04_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.43)
 $DynamicVar(SENSOR_04_P, 43)
 
 microchip.control.rede.sensor04.TEMPERATURA
-$DeclareVar(SENSOR_04_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.44)
+$DeclareVar(SENSOR_04_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.44)
 $DynamicVar(SENSOR_04_T, 44)
 
 ----------------------------------------------------------------------------
@@ -235,23 +235,23 @@ $DynamicVar(SENSOR_04_T, 44)
 ----------------------------------------------------------------------------
 
 microchip.control.rede.sensor05.ID
-$DeclareVar(SENSOR_05_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.4.5)
+$DeclareVar(SENSOR_05_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.3.50)
 $StaticVar(SENSOR_05_ID, 50)
 
 microchip.control.rede.sensor05.LUMINOSIDADE
-$DeclareVar(SENSOR_05_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.51)
+$DeclareVar(SENSOR_05_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.51)
 $DynamicVar(SENSOR_05_L, 51)
 
 microchip.control.rede.sensor05.UMIDADE
-$DeclareVar(SENSOR_05_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.52)
+$DeclareVar(SENSOR_05_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.52)
 $DynamicVar(SENSOR_05_U, 52)
 
 microchip.control.rede.sensor05.PRESSAO
-$DeclareVar(SENSOR_05_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.53)
+$DeclareVar(SENSOR_05_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.53)
 $DynamicVar(SENSOR_05_P, 53)
 
 microchip.control.rede.sensor05.TEMPERATURA
-$DeclareVar(SENSOR_05_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.54)
+$DeclareVar(SENSOR_05_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.54)
 $DynamicVar(SENSOR_05_T, 54)
 
 ----------------------------------------------------------------------------
@@ -262,23 +262,23 @@ $DynamicVar(SENSOR_05_T, 54)
 ----------------------------------------------------------------------------
 
 microchip.control.rede.sensor06.ID
-$DeclareVar(SENSOR_06_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.4.6)
+$DeclareVar(SENSOR_06_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.3.60)
 $StaticVar(SENSOR_06_ID, 60)
 
 microchip.control.rede.sensor06.LUMINOSIDADE
-$DeclareVar(SENSOR_06_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.61)
+$DeclareVar(SENSOR_06_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.61)
 $DynamicVar(SENSOR_06_L, 61)
 
 microchip.control.rede.sensor06.UMIDADE
-$DeclareVar(SENSOR_06_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.62)
+$DeclareVar(SENSOR_06_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.62)
 $DynamicVar(SENSOR_06_U, 62)
 
 microchip.control.rede.sensor06.PRESSAO
-$DeclareVar(SENSOR_06_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.63)
+$DeclareVar(SENSOR_06_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.63)
 $DynamicVar(SENSOR_06_P, 63)
 
 microchip.control.rede.sensor06.TEMPERATURA
-$DeclareVar(SENSOR_06_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.64)
+$DeclareVar(SENSOR_06_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.64)
 $DynamicVar(SENSOR_06_T, 64)
 
 ----------------------------------------------------------------------------
@@ -289,23 +289,23 @@ $DynamicVar(SENSOR_06_T, 64)
 ----------------------------------------------------------------------------
 
 microchip.control.rede.sensor07.ID
-$DeclareVar(SENSOR_07_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.4.7)
+$DeclareVar(SENSOR_07_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.3.70)
 $StaticVar(SENSOR_07_ID, 70)
 
 microchip.control.rede.sensor07.LUMINOSIDADE
-$DeclareVar(SENSOR_07_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.71)
+$DeclareVar(SENSOR_07_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.71)
 $DynamicVar(SENSOR_07_L, 71)
 
 microchip.control.rede.sensor07.UMIDADE
-$DeclareVar(SENSOR_07_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.72)
+$DeclareVar(SENSOR_07_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.72)
 $DynamicVar(SENSOR_07_U, 72)
 
 microchip.control.rede.sensor07.PRESSAO
-$DeclareVar(SENSOR_07_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.73)
+$DeclareVar(SENSOR_07_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.73)
 $DynamicVar(SENSOR_07_P, 73)
 
 microchip.control.rede.sensor07.TEMPERATURA
-$DeclareVar(SENSOR_07_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.74)
+$DeclareVar(SENSOR_07_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.74)
 $DynamicVar(SENSOR_07_T, 74)
 
 ----------------------------------------------------------------------------
@@ -316,23 +316,23 @@ $DynamicVar(SENSOR_07_T, 74)
 ----------------------------------------------------------------------------
 
 microchip.control.rede.sensor08.ID
-$DeclareVar(SENSOR_08_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.4.8)
+$DeclareVar(SENSOR_08_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.3.80)
 $StaticVar(SENSOR_08_ID, 80)
 
 microchip.control.rede.sensor08.LUMINOSIDADE
-$DeclareVar(SENSOR_08_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.81)
+$DeclareVar(SENSOR_08_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.81)
 $DynamicVar(SENSOR_08_L, 81)
 
 microchip.control.rede.sensor08.UMIDADE
-$DeclareVar(SENSOR_08_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.82)
+$DeclareVar(SENSOR_08_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.82)
 $DynamicVar(SENSOR_08_U, 82)
 
 microchip.control.rede.sensor08.PRESSAO
-$DeclareVar(SENSOR_08_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.83)
+$DeclareVar(SENSOR_08_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.83)
 $DynamicVar(SENSOR_08_P, 83)
 
 microchip.control.rede.sensor08.TEMPERATURA
-$DeclareVar(SENSOR_08_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.84)
+$DeclareVar(SENSOR_08_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.84)
 $DynamicVar(SENSOR_08_T, 84)
 
 ----------------------------------------------------------------------------
@@ -343,23 +343,23 @@ $DynamicVar(SENSOR_08_T, 84)
 ----------------------------------------------------------------------------
 
 microchip.control.rede.sensor09.ID
-$DeclareVar(SENSOR_09_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.4.9)
+$DeclareVar(SENSOR_09_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.3.90)
 $StaticVar(SENSOR_09_ID, 90)
 
 microchip.control.rede.sensor09.LUMINOSIDADE
-$DeclareVar(SENSOR_09_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.91)
+$DeclareVar(SENSOR_09_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.91)
 $DynamicVar(SENSOR_09_L, 91)
 
 microchip.control.rede.sensor09.UMIDADE
-$DeclareVar(SENSOR_09_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.92)
+$DeclareVar(SENSOR_09_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.92)
 $DynamicVar(SENSOR_09_U, 92)
 
 microchip.control.rede.sensor09.PRESSAO
-$DeclareVar(SENSOR_09_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.93)
+$DeclareVar(SENSOR_09_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.93)
 $DynamicVar(SENSOR_09_P, 93)
 
 microchip.control.rede.sensor09.TEMPERATURA
-$DeclareVar(SENSOR_09_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.94)
+$DeclareVar(SENSOR_09_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.94)
 $DynamicVar(SENSOR_09_T, 94)
 
 ----------------------------------------------------------------------------
@@ -370,23 +370,23 @@ $DynamicVar(SENSOR_09_T, 94)
 ----------------------------------------------------------------------------
 
 microchip.control.rede.sensor10.ID
-$DeclareVar(SENSOR_10_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.4.10)
+$DeclareVar(SENSOR_10_ID, BYTE, SINGLE, READONLY, 43.6.1.4.1.17095.3.100)
 $StaticVar(SENSOR_10_ID, 100)
 
 microchip.control.rede.sensor10.LUMINOSIDADE
-$DeclareVar(SENSOR_10_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.101)
+$DeclareVar(SENSOR_10_L, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.101)
 $DynamicVar(SENSOR_10_L, 101)
 
 microchip.control.rede.sensor10.UMIDADE
-$DeclareVar(SENSOR_10_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.102)
+$DeclareVar(SENSOR_10_U, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.102)
 $DynamicVar(SENSOR_10_U, 102)
 
 microchip.control.rede.sensor10.PRESSAO
-$DeclareVar(SENSOR_10_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.103)
+$DeclareVar(SENSOR_10_P, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.103)
 $DynamicVar(SENSOR_10_P, 103)
 
 microchip.control.rede.sensor09.TEMPERATURA
-$DeclareVar(SENSOR_10_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.104)
+$DeclareVar(SENSOR_10_T, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.104)
 $DynamicVar(SENSOR_10_T, 104)
 ----------------------------------------------------------------------------
 - Fim da declaracao do sensor10
@@ -398,35 +398,35 @@ $DynamicVar(SENSOR_10_T, 104)
 - microchip.control.grandeza - Lista de grandezas 
 ----------------------------------------------------------------------------
 microchip.control.grandeza.luminosidade.MAXVALUE
-$DeclareVar(LUMINOSIDADE_MAX, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.202)
+$DeclareVar(LUMINOSIDADE_MAX, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.202)
 $DynamicVar(LUMINOSIDADE_MAX, 202)
 
 microchip.control.grandeza.luminosidade.MINVALUE
-$DeclareVar(LUMINOSIDADE_MIN, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.201)
+$DeclareVar(LUMINOSIDADE_MIN, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.201)
 $DynamicVar(LUMINOSIDADE_MIN, 201)
 
 microchip.control.grandeza.umidade.MAXVALUE
-$DeclareVar(UMIDADE_MAX, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.212)
+$DeclareVar(UMIDADE_MAX, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.212)
 $DynamicVar(UMIDADE_MAX, 212)
 
 microchip.control.grandeza.umidade.MINVALUE
-$DeclareVar(UMIDADE_MIN, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.211)
+$DeclareVar(UMIDADE_MIN, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.211)
 $DynamicVar(UMIDADE_MIN, 211)
 
 microchip.control.grandeza.temperatura.MAXVALUE
-$DeclareVar(TEMPERATURA_MAX, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.222)
+$DeclareVar(TEMPERATURA_MAX, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.222)
 $DynamicVar(TEMPERATURA_MAX, 222)
 
 microchip.control.grandeza.temperatura.MINVALUE
-$DeclareVar(TEMPERATURA_MIN, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.221)
+$DeclareVar(TEMPERATURA_MIN, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.221)
 $DynamicVar(TEMPERATURA_MIN, 221)
 
 microchip.control.grandeza.pressao.MAXVALUE
-$DeclareVar(PRESSAO_MAX, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.232)
+$DeclareVar(PRESSAO_MAX, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.232)
 $DynamicVar(PRESSAO_MAX, 232)
 
 microchip.control.grandeza.pressao.MINVALUE
-$DeclareVar(PRESSAO_MIN, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.4.231)
+$DeclareVar(PRESSAO_MIN, BYTE, SINGLE, READWRITE, 43.6.1.4.1.17095.3.231)
 $DynamicVar(PRESSAO_MIN, 231)
 
 ****************************************************************************
